@@ -1,0 +1,46 @@
+<ion-view view-title="Customers" class="temp1">
+<ion-nav-buttons side="left">
+      <a href="#/start"><button class="button">HOME</button></a>
+    </ion-nav-buttons>
+<ion-nav-buttons side="right">
+      <a href="#/composeMessages"><button class="button">Done
+      </button></a>
+    </ion-nav-buttons>
+  <ion-content>
+    <input  class="fields white" type="text" ng-model="name" placeholder="seach by name"/>
+    <label>
+      Sort by: 
+    <select ng-model="sorttype" ng-change="all()">
+      <option value="name">Name</option>
+      <option value="stars" selected>Stars</option>
+    </select>
+  </label>
+    <div class="button-bar">
+    <button class="button button-positive" ng-click="search(name)">Search</button>
+    <button class="button button-positive" ng-click="all()">All</button>
+    </div>
+    <ion-list class="fields">
+      <ion-item ng-repeat="customer in customers|filter:query | orderBy: sorttype" class="item-avatar fields" ng-click="toggleChecked(customer)">
+      <ion-option-button class="button-balanced" ng-click="edit(customer)">
+          <i>View</i>
+        </ion-option-button>
+        <img src="ba.jpg"/>
+        <h2>{{customer.name | capitalize}}</h2>
+        <p>{{customer.phoneNum }}</p>
+
+        <ion-option-button class="button-assertive" ng-click="remove(customer)">
+          <i>Delete</i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    
+<h3>Selected Customers: {{getTotalCheckedItems()}}</h3>
+
+            <table>
+                <tr ng-repeat="item in checked" class="item-checked">
+                    <td><b>name:</b> {{item.name| capitalize}} -</td>
+                    <td><b>phnNum:</b> {{item.phoneNum}}</td>
+                </tr>
+            </table>
+  </ion-content>
+</ion-view>

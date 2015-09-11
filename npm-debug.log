@@ -1,0 +1,58 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'ng-dialog' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose install initial load of C:\xampp\htdocs\vishi\vishityagi-Custom-app-master\package.json
+5 warn package.json customerapp@1.0.0 No repository field.
+6 warn package.json customerapp@1.0.0 No README data
+7 warn package.json customerapp@1.0.0 No license field.
+8 verbose readDependencies loading dependencies from C:\xampp\htdocs\vishi\vishityagi-Custom-app-master\package.json
+9 silly cache add args [ 'ng-dialog', null ]
+10 verbose cache add spec ng-dialog
+11 silly cache add parsed spec { raw: 'ng-dialog',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'ng-dialog',
+11 silly cache add   rawSpec: '',
+11 silly cache add   spec: '*',
+11 silly cache add   type: 'range' }
+12 silly addNamed ng-dialog@*
+13 verbose addNamed "*" is a valid semver range for ng-dialog
+14 silly addNameRange { name: 'ng-dialog', range: '*', hasData: false }
+15 silly mapToRegistry name ng-dialog
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/ng-dialog
+19 verbose addNameRange registry:https://registry.npmjs.org/ng-dialog not in flight; fetching
+20 verbose request uri https://registry.npmjs.org/ng-dialog
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 3:28:59 PM
+23 verbose request id b7140dbd4602b115
+24 http request GET https://registry.npmjs.org/ng-dialog
+25 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org
+26 info attempt registry request try #2 at 3:29:09 PM
+27 http request GET https://registry.npmjs.org/ng-dialog
+28 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org
+29 info attempt registry request try #3 at 3:30:09 PM
+30 http request GET https://registry.npmjs.org/ng-dialog
+31 verbose stack Error: read ECONNRESET
+31 verbose stack     at exports._errnoException (util.js:746:11)
+31 verbose stack     at TCP.onread (net.js:559:26)
+32 verbose cwd C:\xampp\htdocs\vishi\vishityagi-Custom-app-master
+33 error Windows_NT 6.1.7601
+34 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "ng-dialog"
+35 error node v0.12.5
+36 error npm  v2.11.2
+37 error code ECONNRESET
+38 error errno ECONNRESET
+39 error syscall read
+40 error network read ECONNRESET
+40 error network This is most likely not a problem with npm itself
+40 error network and is related to network connectivity.
+40 error network In most cases you are behind a proxy or have bad network settings.
+40 error network
+40 error network If you are behind a proxy, please make sure that the
+40 error network 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]

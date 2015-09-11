@@ -1,0 +1,29 @@
+<ion-view view-title="Reminders"  class="temp1">
+<ion-nav-buttons side="left">
+      <a href="#/start"><button class="button">HOME</button></a>
+    </ion-nav-buttons>
+<ion-nav-buttons side="right">
+      <a href="#/SetReminder"><button class="button">+ Reminder</button></a>
+      <button class="button" ng-click="add()">menu
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+  <input type="text" ng-model="name"/>
+
+  <div class="button-bar">
+    <button  class="button button-calm" ng-click="search(name)">search</button></form>
+    <button  class="button button-calm" ng-click="allreminders()">all</button>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="reminder in reminders" class="item-avatar">
+        <h2>{{ reminder.name }}</h2>
+        <!--<p>Set On:{{ reminder.settime }}</p>-->
+        <p>Remind On:{{ reminder.remindDate }}</p>
+
+        <ion-option-button class="button-assertive" ng-click="remove(reminder)">
+          <i class="ion-minus-circled"></i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

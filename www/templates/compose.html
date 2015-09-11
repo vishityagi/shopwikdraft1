@@ -1,0 +1,37 @@
+<ion-view view-title="Compose"  class="temp1">
+<ion-nav-buttons side="right">
+      <a href="#/tab/Customers"><button class="button">Customers
+      </button></a>
+      <button class="button">menu
+      </button>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header" scroll="true">
+    <div>
+    <form class="simple-form">
+    <a href="#/tab/Customers"><label class="item item-input">
+			<span class="input-label">To:</span>
+  			<p ng-repeat="item in items">{{item.name}},</p>
+
+  		</label></a>
+		<label class="item item-input">
+			<span class="input-label">Title:</span>
+  			<input type="text" ng-model="msg.title" required/>
+  		</label>
+  		<br>
+		<label class="item item-input">
+			<textarea maxlength="50" placeholder="Enter your msg here.." maxlength="120" ng-model="msg.texts">
+			</textarea>
+		</label>
+		<br>
+		<div class="button-bar">
+		<input class="button button-calm" type="button" ng-click="reset()" value="Reset"/>
+		<input class="button button-calm" type="submit" ng-click="update(msg)" value="Save"/>
+    <a href="#/tab/Messages" class="button button-calm">Cancel</a>
+	<button class="button button-calm" type="button">Send</button>
+<!--<button class="button button-calm" type="button" ng-click="send(msg)">Send</button>-->
+		</div>
+	</form>
+</div>
+
+  </ion-content>
+</ion-view>

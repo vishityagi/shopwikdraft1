@@ -1,0 +1,54 @@
+
+<ion-view view-title="Reviews" class="temp1">
+<ion-nav-buttons side="left">
+      <a href="#/start"><button class="button">HOME</button></a>
+    </ion-nav-buttons>
+<ion-content scroll="true">
+<div width=50%>
+
+	<form class="simple-form">
+	<label class="item item-input fields">
+		    <span class="input-label white">Mobile No. :</span>
+       		<input type="tel" ng-model="customer.phoneNum" ng-keyup="search(customer.phoneNum)" required/>
+		</label>
+  		<br>
+  		<label class="item item-input fields">
+			<span class="input-label white">Name :</span>
+  			<input type="text" ng-model="customer.name" required/>
+  		</label>
+		<br>
+  		<label class="item item-input fields">
+ 			<span class="input-label white">Email :</span>
+  			<input type="email" ng-model="customer.email"required/>
+		</label>
+		<br>
+		
+		<label class="item item-input fields">
+			<span class="input-label white">Stars :</span>
+			<input type="number" string-to-number ng-model="customer.stars" class="fields">
+		</label>
+		<br>
+		<label class="item item-input fields">
+		<span class="input-label white">Comments :</span>
+		<textarea ROWS="3" COLS="40" class="fields">
+		</textarea>
+		</label>
+		<br>
+		<div class="button-bar">
+		<input class="button button-block button-positive fields" type="button" ng-click="reset()" value="Reset"/>
+		<input class="button button-block button-positive fields" type="submit" ng-click="update(customer)" value="Save"/>
+		<a href="#/SetReminder" class="button  button-block button-positive fields" type="button" value="Add Reminder">Add Reminder</a>
+		</div>
+	</form>
+	
+</div>
+<!--<pre>form = {{customer | json}}</pre>
+ <pre>master = {{master | json}}</pre>-->
+
+
+  </ion-content>
+</ion-view>
+
+
+
+

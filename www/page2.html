@@ -1,0 +1,23 @@
+<ion-view title="Login"  class="temp1">
+    <ion-content padding="true" class="has-header">
+    
+           <!-- <form ng-submit="check(email,password)">-->
+           <form>
+            
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="email" required/>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="password" required/>
+                </label>
+            <div class="spacer" style="height: 40px;"></div>
+            <button class="button button-positive button-block " type="submit">Log in</button>
+            
+            <!--<a href="#/signup" class="button button-positive button-clear button-block ">Or create an account</a>
+            <span id="message">{{message}}</span>-->
+        </form>
+        
+    </ion-content>
+</ion-view>

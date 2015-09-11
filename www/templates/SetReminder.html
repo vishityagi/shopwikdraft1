@@ -1,0 +1,54 @@
+<ion-view view-title="Reminders"  class="temp1"> 
+<ion-content padding="true" class="has-header" scroll="true">
+<div>
+
+	<form class="simple-form" validate>
+		<label class="item item-input">
+			<span class="input-label">Name</span>
+  			<input type="text" ng-model="reminder.cname" required/>
+  		</label>
+  		<br>
+  		<label class="item item-input">
+ 			<span class="input-label">PhoneNum</span>
+  			<input type="tel" ng-model="reminder.PhoneNum"required/>
+		</label>
+		<br>
+		<label class="item item-input">
+		    <span class="input-label">Remind Date</span>
+       		<input type="date" ng-model="reminder.remindDate" required/>
+		</label>
+		<br>
+		<label class="item item-input">
+			<span class="input-label">Items</span>
+			<select>
+				<option>Jeans</option>
+				<option>Formal Pant</option>
+				<option>Shirt</option>
+			</select>
+		</label>
+		<br>
+		<label class="item item-input">
+ 			<span class="input-label">Comments</span>
+
+		<textarea NAME="SpecialRequest" ROWS="3" COLS="40">
+			
+		</textarea>
+		</label>
+		<br>
+		 <div class="button-bar">
+		<input class="button button-calm" type="button" ng-click="reset()" value="Reset"/>
+		<input class="button button-calm" type="submit" ng-click="update(reminder)" value="Save"/>
+		 </div>
+	</form>
+	
+</div>
+<!--<pre>form = {{reminder | json}}</pre>
+ <pre>master = {{master | json}}</pre>-->
+
+
+  </ion-content>
+</ion-view>
+
+
+
+

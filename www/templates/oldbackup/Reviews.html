@@ -1,0 +1,47 @@
+
+<ion-view view-title="Reviews">
+<ion-content scroll="true">
+<div>
+
+	<form class="simple-form">
+		<label class="item item-input">
+			<span class="input-label">Name</span>
+  			<input type="text" ng-model="customer.name" required/>
+  		</label>
+  		<br>
+  		<label class="item item-input">
+ 			<span class="input-label">Email</span>
+  			<input type="email" ng-model="customer.email"required/>
+		</label>
+		<br>
+		<label class="item item-input">
+		    <span class="input-label">Telephone</span>
+       		<input type="tel" ng-model="customer.phoneNum" required/>
+		</label>
+		<br>
+		<label class="item item-input">
+			<span class="input-label">Stars</span>
+			<input type="text" ng-model="customer.stars">
+		</label>
+		<br>
+		<span>Comments</span>
+
+		<textarea NAME="SpecialRequest" ROWS="3" COLS="40">
+			
+		</textarea>
+		<br>
+		<input type="button" ng-click="reset()" value="Reset"/>
+		<input type="submit" ng-click="update(customer)" value="Save"/>
+	</form>
+	
+</div>
+<pre>form = {{customer | json}}</pre>
+ <pre>master = {{master | json}}</pre>
+
+
+  </ion-content>
+</ion-view>
+
+
+
+

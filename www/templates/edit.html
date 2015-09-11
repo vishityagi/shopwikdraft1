@@ -1,0 +1,46 @@
+<ion-view view-title="Customer-edit" class="temp1">
+<ion-content scroll="true">
+<div>
+
+	<form class="simple-form" editable-form>
+		<form class="simple-form">
+		<label class="item item-input fields">
+			<span class="input-label white">Name</span>
+  			<input type="text" ng-model="actUser.name" placeholder="{{ actUser.name || 'empty' }}" required/>
+  		</label>
+  		<br>
+  		<label class="item item-input fields">
+ 			<span class="input-label white">Email</span>
+  			<input type="email" ng-model="actUser.email" placeholder="{{ actUser.email || 'empty' }}" required/>
+		</label>
+		<br>
+		<label class="item item-input fields">
+		    <span class="input-label white">Telephone</span>
+       		<span>{{ actUser.phoneNum || 'empty' }}</span>
+		</label>
+		<br>
+		<label class="item item-input fields">
+			<span class="input-label white">Stars</span>
+			<input type="number" string-to-number ng-model="actUser.stars" placeholder="{{ actUser.stars || 'empty' }}" class="fields">
+		</label>
+		<br>
+		<label class="item item-input fields">
+		<span class="input-label white">Comments</span>
+		<textarea ROWS="3" COLS="40" class="fields">
+		</textarea>
+		</label>
+		<br>
+		<div class="button-bar">
+		<input class="button button-block button-positive fields" type="button" ng-click="reset()" value="Reset"/>
+		<input class="button button-block button-positive fields" type="submit" ng-click="update(actUser)" value="Save"/>
+		<input class="button  button-block button-positive fields" type="button" value="Add Reminder"/>
+		</div>
+	</form>
+	
+</div>
+<!--<pre>form = {{customer | json}}</pre>
+ <pre>master = {{master | json}}</pre>-->
+
+
+  </ion-content>
+</ion-view>

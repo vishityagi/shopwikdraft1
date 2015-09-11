@@ -1,0 +1,20 @@
+.temp1{
+	background: url("background.jpg");
+	background-repeat: no-repeat;
+    background-position: center;
+}
+.fields{
+	background-color: rgba(100,100,100,.1);
+}
+div[ng-controller="editCtrl"] > div {
+   height: 35px;
+}
+div[ng-controller="editCtrl"] > div > * {
+   vertical-align: top;
+}
+/*.white{
+	color: white;
+}
+input, select, textarea {
+color: white;
+}*/
